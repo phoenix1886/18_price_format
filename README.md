@@ -26,7 +26,7 @@ $ python format_price.py 1500.124
 Script works in infinite loop, waiting for user's input.
 To interrupt the script, press **ctrl+C**.
 
-## How to import price_format_function
+## How to import price_format function
 ```python
 from format_price import format_price
 ```
