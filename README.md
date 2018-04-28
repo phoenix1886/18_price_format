@@ -33,11 +33,9 @@ otherwise it returns None.
 
 ## Example of format_price function work
 ```python
->>> format_price(Decimal('.015'))
-'0.02'
 >>> format_price('1000.025')
 '1 000.03'
->>> format_price(1000)
+>>> format_price('1000')
 '1 000'
 ```
 
