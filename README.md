@@ -28,9 +28,8 @@ $ python format_price.py 1500.124
 ```python
 from format_price import format_price
 ```
-Imported `format_price` function can work with string input, as well as
-with integers and decimal, otherwise it returns None. It doesn't accept
-float prices, because of unpredicted rounding results.
+Imported `format_price` function can work with string input,
+otherwise it returns None.
 
 ## Example of format_price function work
 ```python
@@ -47,7 +46,7 @@ float prices, because of unpredicted rounding results.
 python tests.py
 ................
 ----------------------------------------------------------------------
-Ran 16 tests in 0.003s
+Ran 20 tests in 0.004s
 
 OK
 ```

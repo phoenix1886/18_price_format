@@ -1,23 +1,19 @@
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 import argparse
+import re
 
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('price', help='unformatted price', type=Decimal)
+    parser.add_argument('price', help='unformatted price')
     return parser.parse_args()
 
 
-def check_input_data_type(input_data):
-    if isinstance(input_data, bool):
-        return False
-    if isinstance(input_data, (int, Decimal, str)):
-        return True
-    return False
-
-
-def format_price(price, check_data_types_function=check_input_data_type):
-    if not check_data_types_function(price):
+def format_price(price):
+    if not isinstance(price, str):
+        return None
+    price = price.strip()
+    if not re.fullmatch(r'\d*\.*\d*', price):
         return None
 
     try:
