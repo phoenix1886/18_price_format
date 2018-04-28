@@ -29,6 +29,7 @@ $ python format_price.py 1500.124
 from format_price import format_price
 ```
 Imported `format_price` function can work with string input,
+as well as with integers and floats
 otherwise it returns None.
 
 ## Example of format_price function work
@@ -36,6 +37,10 @@ otherwise it returns None.
 >>> format_price('1000.025')
 '1 000.03'
 >>> format_price('1000')
+'1 000'
+>>> format_price(-1000.025)
+'-1 000.03'
+>>> format_price(1000)
 '1 000'
 ```
 

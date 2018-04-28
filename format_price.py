@@ -11,9 +11,9 @@ def parse_arguments():
 
 def format_price(price):
     if not isinstance(price, str):
-        return None
+        price = str(price)
     price = price.strip()
-    if not re.fullmatch(r'\d*\.*\d*', price):
+    if not re.fullmatch(r'[-|+]?\d*\.*\d*', price):
         return None
 
     try:
